@@ -5,6 +5,14 @@ const app = express();
 
 const PORT = 3000;
 
+// Using the public folder at the root of the project
+app.use(express.static("public"));
+// This is the URL that we're going to test: http://localhost:3000/mountains_1.jpeg
+
+// Using the images folder at the route /images
+app.use('/images', express.static("images"));
+// This is the URL that we're going to test: http://localhost:3000/images/mountains_2.jpeg
+
 // GET
 app.get('/', (req, res) => {
     res.json(data);

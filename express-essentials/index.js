@@ -28,6 +28,33 @@ app.get('/redirect', (request, response) => {
     response.redirect('http://www.linkedin.com')
 })
 
+//Route chaining
+app.route('/class')
+.get((request, response) => {
+    response.send('Retrieve class info')
+})
+.post((request, response) => {
+    response.send('Create class info')
+})
+.put((request, response) => {
+    response.send('Update class info')
+})
+
+// GET
+// app.get('/class', (request, response) => {
+//     response.send('Retrieve class info')
+// });
+
+// POST
+// app.post('/class', (request, response) => {
+//     response.send('Create class info')
+// });
+
+// PUT
+// app.put('/class', (request, response) => {
+//     response.send('Update class info')
+// })
+
 // GET with next()
 app.get('/next', (req, res, next) => {
     console.log("The response will be sent by the next function.");

@@ -22,3 +22,6 @@
 
 ## What are routing parameters?
 ![ROUTING_PARAMETER](./resources/images/06_ROUTING_PARAMETER.png)
+
+## What is route chaining in Express?
+![ROUTE_CHAINING](./resources/images/07_ROUTE_CHAINING.png)

@@ -18,6 +18,15 @@ app.get('/', (req, res) => {
     res.json(data);
 });
 
+// GET with Routing Parameters
+app.get('/class/:id', (req, res) => {
+    const studentId = Number(req.params.id);
+
+    const student = data.filter((student) => student.id === studentId);
+    res.send(student);
+
+});
+
 // POST
 app.post('/create', (req, res) => {
     res.send('This is a POST request at /create');
@@ -35,6 +44,5 @@ app.delete('/delete', (req, res) => {
 
 app.listen(PORT, () => {
     console.log(`The server is running on port ${PORT}`);
-    console.log(data);
 });
 

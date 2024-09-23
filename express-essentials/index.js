@@ -18,6 +18,16 @@ app.get('/', (req, res) => {
     res.json(data);
 });
 
+// GET - download method
+app.get('/download', (request, response) => {
+    response.download('images/mountains_2.jpeg')
+})
+
+// GET - redirect method
+app.get('/redirect', (request, response) => {
+    response.redirect('http://www.linkedin.com')
+})
+
 // GET with next()
 app.get('/next', (req, res, next) => {
     console.log("The response will be sent by the next function.");

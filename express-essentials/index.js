@@ -7,7 +7,7 @@ const PORT = 3000;
 
 // GET
 app.get('/', (req, res) => {
-    res.send('This is a GET request at /');
+    res.json(data);
 });
 
 // POST

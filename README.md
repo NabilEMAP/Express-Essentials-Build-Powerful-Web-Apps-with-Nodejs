@@ -19,3 +19,6 @@
 
 ## Let's GET some data: Creating a basic data endpoint
 ![BASIC_DATA_ENDPOINT](./resources/images/05_BASIC_DATA_ENDPOINT.png)
+
+## What are routing parameters?
+![ROUTING_PARAMETER](./resources/images/06_ROUTING_PARAMETER.png)

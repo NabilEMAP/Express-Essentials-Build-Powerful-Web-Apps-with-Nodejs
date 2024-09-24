@@ -41,7 +41,8 @@ app.get('/redirect', (request, response) => {
 //Route chaining
 app.route('/class')
 .get((request, response) => {
-    response.send('Retrieve class info')
+    //response.send('Retrieve class info')
+    throw new Error();
 })
 .post((request, response) => {
     response.send('Create class info')
@@ -97,6 +98,12 @@ app.put('/edit', (req, res) => {
 // DELETE
 app.delete('/delete', (req, res) => {
     res.send('This is a DELETE request at /delete');
+});
+
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something is broken!');
+    // Make sure to make your error message as informative as possible for the user based on your application
 });
 
 app.listen(PORT, () => {

@@ -66,11 +66,12 @@ app.get('/next', (req, res, next) => {
 
 // GET with Routing Parameters
 app.get('/class/:id', (req, res) => {
+    // Middleware: Access the routing parameters
     const studentId = Number(req.params.id);
 
     const student = data.filter((student) => student.id === studentId);
+    // Everything above this line is middleware
     res.send(student);
-
 });
 
 // POST

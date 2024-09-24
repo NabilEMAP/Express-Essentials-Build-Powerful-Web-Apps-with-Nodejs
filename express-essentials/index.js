@@ -13,9 +13,19 @@ app.use(express.static("public"));
 app.use('/images', express.static("images"));
 // This is the URL that we're going to test: http://localhost:3000/images/mountains_2.jpeg
 
+// Using express.json and express.urlencoded
+// app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+
 // GET
 app.get('/', (req, res) => {
     res.json(data);
+});
+
+// POST - express.json and express.urlencoded
+app.post('/item', (req, res) => {
+    console.log(req.body);
+    res.send(req.body);
 });
 
 // GET - download method
